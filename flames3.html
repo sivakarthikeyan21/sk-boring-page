@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<title>easy to use flames site</title>
+<style>
+//
+</style>
+</head>
+<body>
+<h1>flames game<br>
+<form>
+<label for="name1">name1</label><br>
+<input type="text" id="name1" placeholder="enter the first name" ><br>
+<label for="name2">name2</label><br>
+<input type="text" id="name2" placeholder="enter the second name" ><br>
+<button type="button" onclick="checkFLAMES()">Check</button>
+
+
+  <div id="result"></div>
+</form>
+</h1>
+</body>
+<script>
+function checkFLAMES() {
+    let name1 = document.getElementById("name1").value.toLowerCase().replace(/\s/g, "").split("");
+    let name2 = document.getElementById("name2").value.toLowerCase().replace(/\s/g, "").split("");
+
+for(i=0;i<name1.length;i++){
+    for(j=0;j<name2.length;j++){
+        if(name1[i]==name2[j]){
+
+//splice method is used to remove the element from the array
+//syntax: array.splice(index,element to be removed count)
+            name1.splice(i,1)
+            name2.splice(j,1)
+            i=-1
+            break
+        }
+    }
+    
+}
+//console.log(name1,name2)
+
+var totalcount = name1.length+name2.length
+//console.log(totalcount)
+var flames = ["f","l","a","m","e","s"]
+while(flames.length>1){
+    var index = (totalcount%flames.length)-1
+    if(index>=0){
+        flames = flames.slice(index+1).concat(flames.slice(0,index))
+    }
+    else{
+        flames.pop()
+    }
+}
+let output = "";
+
+if (flames[0] == "f")
+    output = "Friends 👬"
+else if (flames[0] == "l")
+    output = "Love ❤️"
+else if (flames[0] == "a")
+    output = "Affection 😊"
+else if (flames[0] == "m")
+    output = "Marriage 💍";
+else if (flames[0] == "e")
+    output = "Enemies 😠"
+else
+    output = "Siblings 👫"
+
+document.getElementById("result").innerText = "Result: "+ output;
+
+
+}
+</script>
+</html>
