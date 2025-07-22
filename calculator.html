@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>boring game two</title>
+</head>
+<body>
+<h1>Love calculator❤<br>
+<form>
+<label for ="name1">name1</label><br>
+<input type="text" id="name1" placeholder="enter the first name"><br>
+<label for ="name2">name2</label><br>
+<input type="text" id="name2" placeholder="enter the second name"><br>
+
+<button type="button" onclick="lovecalculator()">calculate love percentage</button><br>
+
+
+<div id="result"></div>
+</h1>
+</form>
+</body>
+<script>
+function lovecalculator(){
+var name1=document.getElementById("name1").value.toLowerCase().trim()
+var name2=document.getElementById("name2").value.toLowerCase().trim()
+var output =""
+
+if(name1===""||name2===""){
+	output = "enter both the name correctly"
+	document.getElementById("result").innerText= "please both enter your names!!"
+	return
+}	
+
+lovepercentage=Math.floor(Math.random()*101)
+if(lovepercentage>80){
+    output=lovepercentage + "% - you both are made for each other ❤️ "
+}
+else if(lovepercentage<80 && lovepercentage>60){
+    output =lovepercentage + "% - you both have chances to become a coupple 💕"
+}
+else if(lovepercentage<60 && lovepercentage>40){
+    output =lovepercentage + "% -you both are good friendds 👯‍♂️"
+}
+else if(lovepercentage<40 && lovepercentage>20){
+    output =lovepercentage + "% -you guys just know each other 👋"
+}
+else{
+    output =lovepercentage + "% -please dont talk to each other 🚫"
+}
+
+
+document.getElementById("result").innerText = "result: " + output
+}
+</script>
+</html>
