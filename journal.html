@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My every day journal</title>
+        <style>
+            header{
+                background-color: aqua;
+                color:black;
+                text-align: center;
+                padding: 10px;
+                border: 5px solid black;
+                
+
+            }
+        
+            div{
+                background-color:lightcyan;
+                color:black;
+                text-align:center ;
+                border-radius: 10px;
+                margin: 10px;
+                
+            }
+            nav{
+                background-color: lightcoral;
+                color: blue;
+                text-align:center;
+                padding: 5px;
+                border-radius: 10px;
+                margin: 10px 0;
+            
+            }
+            button {
+                background-color: #2315ba;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin:5px;
+            }
+            #topic{ 
+                background-color: rgb(208, 236, 22);
+                color: black;
+                text-align: center;
+                border-radius: 10px;
+
+            }
+            select{
+                background-color: greenyellow;
+                color: black;
+                text-align: center;
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                margin: 5px 0;
+            }
+            #journal{
+                background-color: lightyellow;
+                color: black;
+                text-align: center;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 10px 0;
+                border: black 2px solid;
+
+            }
+            textarea {
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+            }
+            h4{
+                text-align: left;
+            }
+            
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1><i>My Daily Journal</i></h1>
+            </header>
+                <div>
+                <h3>In this journal we can not only write out journal everyday but we can also play some games like love flames and love calculater to make your day more fun if you had a terrible day<br>Make sure tocheck our games and have fun😊😊</i><br>You can also check out my biograghy if you are so bored and if you have plenty of time to waste😂</h3>
+                </div>
+                <hr>
+                <div id="topic">
+                <p><h3><i>My Mental Wellness Journal</i></h3></p>
+                <hr>
+                </div>
+                <div id="journal">
+                <label for="mood"><b>How are you feeeling today?</b></label>
+                <select id="mood">
+                <option value="😊"> 😊Happy</option> 
+                <option value="😔"> 😔Sad</option>
+                <option value="😠"> 😠Angry</option>
+                <option value="😨"> 😨Anxious</option>
+                <option value="😴"> 😴Tired</option>
+                </select>
+                <label for="write"><b>Write whats on your mind today:</b></label>
+                <textarea id="write" rows="6" placeholder="your thoughts here...:"></textarea>
+                <button onclick="saveEntry()">Save Entry</button>
+                   
+                <h4>Your previous entries:</h4>
+                <ul id="entries"></ul>                
+                </div>
+                <nav>
+                    <a href="sk2.html"><button>Biograghy</button></a>
+                    <a href="cal.html"><button>Love Calculator</button></a>
+                    <a href="vs.html"><button>FLAMES Game</button></a>
+                </nav>
+                </body>
+                </html>
+                
